@@ -24,3 +24,44 @@ body {
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
+
+@layer utilities {
+  h1 {
+    @apply scroll-m-20 text-4xl font-extrabold tracking-tight lg:text-5xl;
+  }
+
+  h2 {
+      @apply scroll-m-20 pb-2 text-3xl font-semibold tracking-tight;
+  }
+
+  h3 {
+      @apply scroll-m-20 text-2xl font-semibold tracking-tight;
+  }
+
+  h4 {
+      @apply scroll-m-20 text-xl font-semibold tracking-tight;
+  }
+
+  h5 {
+      @apply scroll-m-20 text-lg font-semibold tracking-tight;
+  }
+
+  h6 {
+      @apply scroll-m-20 font-semibold tracking-tight;
+  }
+
+  p {
+      @apply leading-7;
+  }
+
+  blockquote {
+      @apply border-l-2 pl-6 italic;
+  }
+
+  small {
+      @apply text-sm font-medium leading-none;
+  }
+  select::-ms-expand {
+    display: none;
+  }
+}
