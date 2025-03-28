@@ -1,4 +1,4 @@
-import { IAnimeResponse } from "../types";
+import { IAnimeResponse } from "../../types";
 
 interface PROPS {
   data: IAnimeResponse;
@@ -6,7 +6,10 @@ interface PROPS {
 export const AnimeCard = (props: PROPS) => {
   const { data } = props;
   return (
-    <div className="rounded-md border border-zinc-300 shadow-md dark:border-zinc-700">
+    <div
+      data-testid="anime-card-container"
+      className="rounded-md border border-zinc-300 shadow-md dark:border-zinc-700"
+    >
       <div className="h-44 w-full md:h-96">
         <img
           src={data.images["jpg"].image_url}

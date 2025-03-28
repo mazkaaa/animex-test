@@ -1,4 +1,4 @@
-import { IAnimeResponse, IQuery, IResponse, IResponses } from "../types";
+import { IAnimeResponse, IQuery, IResponse, IResponses } from "../../types";
 
 export const AnimeService = () => {
   const base_url = "https://api.jikan.moe/v4/anime";

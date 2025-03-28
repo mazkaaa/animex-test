@@ -1,7 +1,7 @@
 import { useMemo } from "react";
-import { IPagination, IPaginationQuery } from "../types";
-import { Button } from "./button";
-import { Select } from "./select";
+import { IPagination, IPaginationQuery } from "../../types";
+import { Button } from "../button/button";
+import { Select } from "../select/select";
 
 interface PROPS {
   currentPaginationResponse: IPagination;
