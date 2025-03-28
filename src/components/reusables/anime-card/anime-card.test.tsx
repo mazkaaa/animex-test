@@ -83,7 +83,9 @@ describe("AnimeCard Component", () => {
     render(<AnimeCard data={mockData} />);
     const imageElement = screen.getByAltText("Naruto") as HTMLImageElement;
     expect(imageElement).toBeInTheDocument();
-    expect(imageElement.src).toBe("https://example.com/naruto.jpg");
+    expect(imageElement.src).toBe(
+      "http://localhost/_next/image?url=https%3A%2F%2Fexample.com%2Fnaruto.jpg&w=1920&q=75",
+    );
     expect(imageElement.alt).toBe("Naruto");
   });
 
