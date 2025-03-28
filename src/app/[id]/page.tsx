@@ -1,4 +1,5 @@
 import { AnimeService } from "@/components/services";
+import Image from "next/image";
 import Link from "next/link";
 
 export default async function Page({
@@ -34,10 +35,12 @@ export default async function Page({
       </header>
 
       <section className="grid grid-cols-1 gap-6 md:grid-cols-3">
-        <img
+        <Image
           src={data.images.jpg.large_image_url}
           alt={data.title}
           className="h-full w-full rounded-lg shadow-lg"
+          width={700}
+          height={700}
         />
         <p className="text-zinc-500">{data.synopsis}</p>
         <div className="flex justify-center space-x-4 md:flex-col md:justify-start">
