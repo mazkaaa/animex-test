@@ -57,7 +57,7 @@ export const AnimeContentSection = () => {
 
   const defineListSection = useMemo(() => {
     if (isLoading || !response) {
-      return <div className="text-center">Loading...</div>;
+      return <div>Loading...</div>;
     }
     return (
       <>
