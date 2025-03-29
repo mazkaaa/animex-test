@@ -144,12 +144,12 @@ return (
 
 ### **Approach**
 
--   The detail page is handled using dynamic routes (`app/[id]/page.tsx`).
+-   The detail page is handled using dynamic routes (`app/anime/[id]/page.tsx`).
     
 -   The anime ID is extracted from `params`,  and a fetch request is made on the server side to retrieve details.
     
 
-#### **Example:**  `app/[id]/page.tsx`
+#### **Example:**  `app/anime/[id]/page.tsx`
 
 ```typescript
 export default async function Page({

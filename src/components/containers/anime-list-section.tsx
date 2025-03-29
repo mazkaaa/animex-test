@@ -14,7 +14,7 @@ export const AnimeListSection = (props: PROPS) => {
       return <div className="">No Data Found :(</div>;
     }
     return data.map((item, index) => (
-      <Link key={index} href={`/${item.mal_id}`}>
+      <Link key={index} href={`/anime/${item.mal_id}`}>
         <AnimeCard data={item} />
       </Link>
     ));

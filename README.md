@@ -86,7 +86,8 @@ The application uses the [Jikan API](https://docs.api.jikan.moe/#tag/anime/opera
 app/
   ├── page.tsx  # Home Page (Anime List with Pagination)
   ├── layout.tsx  # Root Layout
-  ├── [id]/page.tsx  # Anime Detail Page
+  ├── anime/[id]/ # Dynamic route folder
+      ├── page.tsx  # Anime Detail Page
   ├── globals.css  # Styling Files
 components/
   ├── containers/  # Container or Wrapper for UI Component
