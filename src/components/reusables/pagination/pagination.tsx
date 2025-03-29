@@ -83,6 +83,66 @@ export const Pagination = (props: PROPS) => {
     return buttons;
   }, [currentPaginationResponse, onPageChange]);
 
+  const definePaginationButton = useMemo(() => {
+    return (
+      <>
+        <Button
+          onClick={() => {
+            if (currentPaginationState.page) {
+              onPageChange(currentPaginationState.page - 1);
+            }
+          }}
+          disabled={currentPaginationState.page === 1}
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="22"
+            height="22"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            strokeWidth="2"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          >
+            <path d="M15 18l-6-6 6-6" />
+          </svg>
+        </Button>
+        {definePageButtons}
+        <Button
+          onClick={() => {
+            if (currentPaginationState.page) {
+              onPageChange(currentPaginationState.page + 1);
+            }
+          }}
+          disabled={
+            currentPaginationState.page ===
+            currentPaginationResponse.last_visible_page
+          }
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="22"
+            height="22"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            strokeWidth="2"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          >
+            <path d="M9 18l6-6-6-6" />
+          </svg>
+        </Button>
+      </>
+    );
+  }, [
+    currentPaginationResponse.last_visible_page,
+    currentPaginationState.page,
+    definePageButtons,
+    onPageChange,
+  ]);
+
   return (
     <div className="flex flex-row items-center justify-between">
       <Select
@@ -94,7 +154,7 @@ export const Pagination = (props: PROPS) => {
         <option value="20">20</option>
       </Select>
       <div className="flex flex-row items-center justify-center gap-2">
-        {definePageButtons}
+        {definePaginationButton}
       </div>
     </div>
   );

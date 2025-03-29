@@ -19,7 +19,7 @@ export const Button = ({
 
   const variantClass = {
     primary:
-      "bg-zinc-100 text-zinc-900 hover:bg-zinc-200 dark:bg-zinc-900 dark:text-zinc-100 dark:hover:bg-zinc-800",
+      "bg-zinc-100 text-zinc-900 hover:bg-zinc-200 dark:bg-zinc-900 dark:text-zinc-100 dark:hover:bg-zinc-800 disabled:bg-zinc-300 disabled:text-zinc-500 disabled:cursor-not-allowed",
     secondary:
       "bg-zinc-800 text-white hover:bg-gray-900 dark:bg-zinc-100 dark:text-zinc-900 dark:hover:bg-zinc-300",
     tertiary: "bg-green-500 text-white hover:bg-green-600",
