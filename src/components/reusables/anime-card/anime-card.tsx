@@ -13,6 +13,7 @@ export const AnimeCard = (props: PROPS) => {
     >
       <div className="h-44 w-full md:h-96">
         <Image
+          priority
           data-testid="anime-card-image"
           src={data.images["jpg"].image_url}
           alt={data.title}

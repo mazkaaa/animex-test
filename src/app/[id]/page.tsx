@@ -36,6 +36,7 @@ export default async function Page({
 
       <section className="grid grid-cols-1 gap-6 md:grid-cols-3">
         <Image
+          priority
           src={data.images.jpg.large_image_url}
           alt={data.title}
           className="h-full w-full rounded-lg shadow-lg"
